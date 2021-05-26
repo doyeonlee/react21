@@ -7,12 +7,10 @@ import Youtube from "./components/pages/Youtube";
 import Script from "./components/pages/Script";
 import Portfolio from "./components/pages/Portfolio";
 import Contact from "./components/pages/Contact";
-import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
-      <Header />
       <Route path="/" exact component={Main} />
       <Route path="/about" exact component={About} />
       <Route path="/reference" exact component={Reference} />
