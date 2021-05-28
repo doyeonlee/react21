@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ info }) {
   return (
     <header id="header">
       <div className="header__inner">
@@ -47,7 +47,7 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div className="header__info">
+      <div className="header__info" id={info}>
         <div>
           <h4>email</h4>
           <p>

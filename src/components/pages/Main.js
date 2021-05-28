@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../Header";
 import Layout from "../Layout";
 
-function Info({ text1, text2, text3, text4 }) {
-  return (
-    <div className="main__cont">
-      <div>{text1}</div>
-      <div>{text2}</div>
-      <div>{text3}</div>
-      <div>{text4}</div>
-    </div>
-  );
+function Info({ text }) {
+  return <div>{text}</div>;
 }
+
+const textInfo = [
+  { text: "we provide" },
+  { text: "visual coding" },
+  { text: "solutions" },
+  { text: "for you webs" },
+];
 
 function Main() {
   return (
@@ -19,12 +19,11 @@ function Main() {
       <Header />
       <Layout>
         <section id="mainCont">
-          <Info
-            text1="we provide"
-            text2="visual coding"
-            text3="solutions"
-            text4="for you webs"
-          />
+          <div className="main__cont">
+            {textInfo.map((el) => (
+              <Info key={el.text} text={el.text} />
+            ))}
+          </div>
         </section>
       </Layout>
     </div>
